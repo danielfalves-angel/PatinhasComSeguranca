@@ -1,0 +1,20 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(233, 233, 233);
+}
+
+.caixa {
+    margin: 30px;
+    display: flex;
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    justify-self: center;
+    justify-content: center;
+    background-color: rgb(175, 212, 150);
+}
+
+button{
+    background-color: rgb(84, 255, 61);
+    color: rgb(0, 0, 0);
+}
