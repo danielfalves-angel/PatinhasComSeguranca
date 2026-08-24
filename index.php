@@ -54,6 +54,7 @@
                     <th>Especie</th>
                     <th>Raca</th>
                     <th>Idade</th>
+                    <th>dono</th>
                     <th>Ações</th>
                 </tr>
                 <?php while ($pet = mysqli_fetch_assoc($pets)) { ?>
@@ -63,6 +64,7 @@
                         <td><?php echo $pet["especie"] ?></td>
                         <td><?php echo $pet["raca"] ?></td>
                         <td><?php echo $pet["idade"] ?></td>
+                        <td><?php echo $pet["usuario_id"] ?></td>
                         <td>
                             <a href="public/editar.php?id=<?php echo $pet["id"] ?>">Editar</a>
                             <a href="public/excluir.php?id=<?php echo $pet["id"] ?>">Excluir</a>
