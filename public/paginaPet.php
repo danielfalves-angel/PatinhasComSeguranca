@@ -23,7 +23,7 @@
     <main>
     <div class="caixa">
         <h2>Adicione um pet</h2>
-        <form action="public/cadastrar.php" method="POST">
+        <form action="cadastrarPet.php" method="POST">
             <label for="nome">Nome:</label>
             <input type="text" name="nome" required>
             <br>

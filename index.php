@@ -2,6 +2,7 @@
 
  include "infra/conexao.php";
  $usuarios = mysqli_query($conexao, "SELECT * FROM usuarios");
+ $pets = mysqli_query($conexao, "SELECT * FROM pets");
  
 ?>
 
@@ -39,6 +40,32 @@
                         <td>
                             <a href="public/editar.php?id=<?php echo $usuario["id"] ?>">Editar</a>
                             <a href="public/excluir.php?id=<?php echo $usuario["id"] ?>">Excluir</a>
+                        </td>
+                    </tr>
+                <?php } ?>
+            </table>
+        </div>
+        <div>
+            <h2>pets:</h2>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Especie</th>
+                    <th>Raca</th>
+                    <th>Idade</th>
+                    <th>Ações</th>
+                </tr>
+                <?php while ($pet = mysqli_fetch_assoc($pets)) { ?>
+                    <tr>
+                        <td><?php echo $pet["id"] ?></td>
+                        <td><?php echo $pet["nome"] ?></td>
+                        <td><?php echo $pet["especie"] ?></td>
+                        <td><?php echo $pet["raca"] ?></td>
+                        <td><?php echo $pet["idade"] ?></td>
+                        <td>
+                            <a href="public/editar.php?id=<?php echo $pet["id"] ?>">Editar</a>
+                            <a href="public/excluir.php?id=<?php echo $pet["id"] ?>">Excluir</a>
                         </td>
                     </tr>
                 <?php } ?>
