@@ -2,7 +2,6 @@
 
  include "infra/conexao.php";
  $usuarios = mysqli_query($conexao, "SELECT * FROM usuarios");
- $pet = mysqli_query($conexao, "SELECT * FROM pet");
  
 ?>
 
@@ -20,7 +19,8 @@
     <header>
         <h1>CRUD - Patinhas com Segurança</h1>
     </header>
-    
+    <button><a href="public/paginaUsu.php">Adicionar Usuário</a></button>
+    <button><a href="public/paginaPet.php">Adicionar Pet</a></button>
     <main>
         <div>
             <h2>Clientes:</h2>
