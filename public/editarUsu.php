@@ -3,10 +3,10 @@
 include "../infra/conexao.php";
 
 $id = $_GET["id"];
-$sql = "SELECT * FROM livros WHERE id = $id";
+$sql = "SELECT * FROM usuarios WHERE id = $id";
 $resultado = mysqli_query($conexao, $sql );
 
-$livro =mysqli_fetch_assoc($resultado);
+$usuario =mysqli_fetch_assoc($resultado);
 
 ?>
 
@@ -27,18 +27,19 @@ $livro =mysqli_fetch_assoc($resultado);
     
     <main>
     <div class="caixa">
-        <h2>Adicione um usuário</h2>
-        <form action="public/cadastrar.php" method="POST">
+        <h2>Editar Usuário</h2>
+        <form action="atualizarUsu.php" method="POST">
+            <input type="hidden" name="id" value="<?= $usuario['id'] ?>">
             <label for="nome">Nome:</label>
-            <input type="text" name="nome" required>
+            <input type="text" name="nome" value="<?= $usuario['nome'] ?>" required>
             <br>
             <label for="email">Email:</label>
-            <input type="email" name="email" required>
+            <input type="email" name="email" value="<?= $usuario['email'] ?>" required>
             <br>
             <label for="senha">Senha:</label>
-            <input type="password" name="senha" required>
+            <input type="password" name="senha" value="<?= $usuario['senha'] ?>" required>
             <br>
-            <button type="submit">Cadastrar</button>
+            <button type="submit">Atualizar</button>
         </form>
     </div>
     </main>

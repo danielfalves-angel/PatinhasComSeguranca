@@ -38,7 +38,7 @@
                         <td><?php echo $usuario["nome"] ?></td>
                         <td><?php echo $usuario["email"] ?></td>
                         <td>
-                            <a href="public/editar.php?id=<?php echo $usuario["id"] ?>">Editar</a>
+                            <a href="public/editarUsu.php?id=<?php echo $usuario["id"] ?>">Editar</a>
                             <a href="public/excluir.php?id=<?php echo $usuario["id"] ?>">Excluir</a>
                         </td>
                     </tr>
@@ -66,7 +66,7 @@
                         <td><?php echo $pet["idade"] ?></td>
                         <td><?php echo $pet["usuario_id"] ?></td>
                         <td>
-                            <a href="public/editar.php?id=<?php echo $pet["id"] ?>">Editar</a>
+                            <a href="public/editarPet.php?id=<?php echo $pet["id"] ?>">Editar</a>
                             <a href="public/excluir.php?id=<?php echo $pet["id"] ?>">Excluir</a>
                         </td>
                     </tr>
